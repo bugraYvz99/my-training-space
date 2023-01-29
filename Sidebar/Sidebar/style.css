@@ -1,0 +1,97 @@
+#sidebar {
+    /* sidebar'ın başlangıç konumu */
+    position: fixed;
+    background: yellowgreen;
+    width: 10%; 
+    
+
+
+    
+    
+}
+
+
+#sidebar.closed {
+    /* sidebar'ın kapatılmış konumu */
+    animation-name: leftsidebar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+#sidebar.opened{
+    /* sidebar'ın açılmış konumu */
+    animation-name: rightsidebar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+#nav-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+
+}
+#articles{
+    position: absolute;
+    left: 11%;
+}
+#articles.closed{
+    animation-name: leftarticles;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    
+}
+#articles.opened{
+    animation-name: rightarticles;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+
+}
+.btn{
+    position: absolute;
+    left: 85%;
+    top: 35%;
+    
+}
+#open{
+    position: absolute;
+    left: 85%;
+    top: 35%;
+
+
+}
+@keyframes leftsidebar {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes rightsidebar {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes leftarticles {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+@keyframes rightarticles {
+    from {
+        transform: translateX(-10%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+
+}
+
